@@ -46,6 +46,7 @@ func main() {
 		log.Fatalf("did not connect: %v", err)
 	}
 	defer conn.Close()
+	log.Print("***grpc connection established***")
 	c := pb.NewGreeterClient(conn)
 
 	// Contact the server and print out its response.

@@ -202,8 +202,7 @@ func (s *server2) discoveryHandler(stream discoveryStream2, typeURL string) erro
 }
 
 func (s *server2) StreamAggregatedResources(stream discoverypb2.AggregatedDiscoveryService_StreamAggregatedResourcesServer) error {
-	//	return s.discoveryHandler(stream, resource.AnyType)
-	return nil
+	return s.discoveryHandler(stream, resource.AnyType)
 }
 
 func (s *server2) StreamEndpoints(stream edspb.EndpointDiscoveryService_StreamEndpointsServer) error {
